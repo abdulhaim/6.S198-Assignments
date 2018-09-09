@@ -60,10 +60,32 @@
 			Task 2: After redoing the experiments from section 2, I observed the following (with support from confidences and top K values):
 			<br/><br/>
 
+			Experiment 1: I trained the network on the same inanimate object as classes (bottle, notebook, and iPad) with the same background, and observed that all the top K images were from the a single class with a confidence of almost 100% for test images that were the same as the trained images. The same was observed for the bottle object placed very far away from the screen. However for images of notebook and iPad, the network was very confused as these objects are of the same shape but different color. 
+
+
+			Experiment 2: With the same 3 classes as before, I trained the network with an object on one background and tested it on another background. I saw that the network had trained on the background and was unable to classify the object to its correct class. 
+
+			Experiment 3: 
+
+
 		</p>
+
+		<h2> <b> Scaling the Confidence Values </b> </h2>
+
+
+		Look at the code in computeConfidences() and try to understand what it does. You can see that it computes the confidence for each class by just adding up the number of the TopK images in each class (the values of nCounts in the code) and dividing by K (the value of kVal).
+
+		For some applications, it might be better to scale the confidences, rather than just making them proportional to the number of TopK images. For example if class A has 10 TopK images, and B and C each have 5 images, it might be better to say that class A has confidence 1 and B and C have 0, rather than saying that A has confidence 0.5 and B and C each have 0.25 as things are now. For other applications, it might be more appropriate to divide the total confidence equally among all the classes that have at least one TopK image, or at least 2 TopK images.
+		<WRITEUP REQUIRED - Problem 5>
+		1. Modify the code in WebcamClassifier.js to experiment with different ways of computing confidences, such as weighted vs. not weighted. You might want to keep things so that confidence values can be interpreted as probabilities, that is, so that each value is between 0 and 1 and so that the confidences for all three classes sum to 1. But this is up to you. Write up and turn in your modifications.
+
+		2. Using your modified confidence calculations, try some of the example scenarios that confused the network, that you looked at in section 2 and section 4. Does one of your new methods  perform better? Why/why not do you think so? Document and turn in the modified and unmodified results for a “confusing” example. Use screen capture to include images if appropriate.
+
+		3. What are some image classification situations where your alternative ways of confidences might come in useful?
 
 
 		<h2> <b> Limiting the number of training examples per class </b> </h2>
+
 		<h2> <b> Further Explorations </b> </h2>
 		<h2> <b> Readings I Found Useful </b> </h2>
 
