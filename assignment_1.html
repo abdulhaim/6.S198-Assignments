@@ -16,27 +16,29 @@
 
 		   <p style = "font-size:20px ; line-height: 1.4em; color: #333 "> For this assignment, we were instructed to run some experiments with a partner and note down our observations. 
 
-			   <br/> <br/> <i>Task 1: </i> We trained the network with a series of our facial expressions and observed that the network can tell the difference between the two faces with a confidence of greater than 95%. 
+			   <br/> <br/> <u> <i>Task 1: </i> </u> We trained the network with a series of our facial expressions and observed that the network can tell the difference between the two faces with a confidence of greater than 95%. 
 				
 			   <br/> <br/><img src="images/assignment_1/multiple_objects.png" alt="Multiple Objects" align="middle" height="200" width="400" />
 
-			   <br/> <br/> <i>Task 2:</i> I trained the network on various inanimate objects, including my phone, notebook, and water bottle and observed a confidence of minimum 95%. However as I take the object further away from the camera, it begins to misclassify. For example, the bottle is mistaken to be the phone at a confidence level of approximately 75% due to the similarity of color between the two objects. 
+			   <br/> <br/>  <u> <i>Task 2: </u> </i> I trained the network on various inanimate objects, including my phone, notebook, and water bottle and observed a confidence of minimum 95%. However as I take the object further away from the camera, it begins to misclassify. For example, the bottle is mistaken to be the phone with a confidence level of approximately 75% due to the similarity of color between the two objects. 
 
 			   <br/> <br/><img src="images/assignment_1/fixed_expression.png" alt="Fixed Expression" align="middle" height="200" width="400" />
 
-			   <br/> <br/> <i>Task 3:</i> I trained the network on two different classes with the same image set; specifically my two classes were my face in a fixed facial expression. In this case, I observed the confidence shift between the two classes with each having approx 50%.
+			   <br/> <br/>  <u> <i>Task 3: </u> </i>I trained the network on two different classes with the same image set; specifically my two classes were the same (my face in a fixed facial expression). In this case, I observed the confidence shift between the two classes with each having approx 50%.
 
-			   <br/> <br/><i>Task 4:</i> With the first class defined as myself two different people having Expression A and the second class defined as two people having Expression B, the classifier was able to distinguish between the two facial expressions at a confidence of 90% as well as the two faces. 
+			   <br/> <br/> <u> <i>Task 4: </u> </i> With the first class defined as two different people having Expression A and the second class defined as two people having Expression B, the classifier was able to distinguish between the two facial expressions at a confidence of 90%. In my case, my first class was a smiling facial expression and my second class was a confused facial expression.
 
 			   <br/><br/> <img src="images/assignment_1/distance.png" alt="Fixed Expression" align="middle" height="200" width="400" />
 
 			   <br/><br/><img src="images/assignment_1/class_3.png" alt="Fixed Expression" align="middle" height="200" width="400" />
 			   
-			   <br/><br/> <i>Task 5:</i> With the first class defined as person A very close and the second class defined as person B very far, the network was very confused and would sometimes misclassify person A as person B and it could be argued that it was training based on distance. I also trained the network with a 3rd class of person B close to the camera, observing that the network could now identify faces with a confidence of 95%. 
+			   <br/><br/>  <u> <i>Task 5: </u> </i> With the first class defined as person A very close to the camera and the second class defined as a person B very far, the network was very confused and would sometimes misclassify person A as person B and it could be argued that it was training based on distance. I also trained the network with a 3rd class of person B close to the camera, observing that the network could now identify faces with a confidence of 95%/
 
-			   <br/> <br/><i>Task 6:</i> <a href="http://lesswrong.com/lw/7qz/machine_learning_and_unintended_consequences/">The Russian Tank Parable </a> is used to illustrate when a network learns based on a different feature in the image rather than the one you assume - in this scenario, the images were trained on the classes cloudy/sunny rather than trees/camouflaged tanks. 
+			   <br/> <br/> <u> <i>Task 6: </u> </i> <a href="http://lesswrong.com/lw/7qz/machine_learning_and_unintended_consequences/">The Russian Tank Parable </a> is used to illustrate when a network learns based on a different feature in the image rather than the one you assume - in this scenario, the images were trained on the classes cloudy/sunny rather than trees/camouflaged tanks. 
 			   <br/> Some examples to illustrate this include: 
-			   <br/> <br/> Example 1: First class defined as a pencil, Second Class defined as a pen. The intended classification is the object but the real classification could be the background of the object (kitchen versus classroom)
+			   <br/> <br/> Example 1: The above question demonstrates the Russian Tank Parable as the network trained based on close verus far rather than on the face of the person. 
+
+			   	<br/> <br/> Example 2: First class defined as a pencil, Second Class defined as a pen. The intended classification is the object but the real classification could be the background of the object (kitchen versus classroom)
 
 			</p>
 
@@ -55,13 +57,34 @@
 
 		<p style = "font-size:20px ; line-height: 1.4em; color: #333 "> 
 
-		 	Task 1: I stored the variables <i> confidences </i> and  <i> nCounts </i> in the global variables <i> globConf </i> and <i> globNCounts </i> respectively and used the window.alert function to display a dialog with the number of closest matches and the confidence level. <br/><br/>
+		 	 <u> <i> Task 1: I stored the variables</u></i> <i> confidences</i> and <i>nCounts</i> in the global variables 
+		 	 <i>globConf</i> and <i>globNCounts</i> respectively and used the window.alert function to display a dialog with the number of closest matches and the confidence level. <br/><br/>
 
-			Task 2: After redoing the experiments from section 2, I observed the following (with support from confidences and top K values):
+			 <u><i>Task 2: <u> <i> After redoing the experiments from section 2, I observed the following (with support from confidences and top K values):
 			<br/><br/>
 
-			Experiment 1: I trained the network on the same inanimate object as classes (bottle, notebook, and iPad) with the same background, and observed that all the top K images were from the a single class with a confidence of almost 100% for test images that were the same as the trained images. The same was observed for the bottle object placed very far away from the screen. However for images of notebook and iPad, the network was very confused as these objects are of the same shape but different color. 
+			Experiment 1: Recognizing  Differences Faces
 
+			<br/><br/>
+
+			Experiment 2: Inanimate Objects
+
+			<br/><br/>
+
+			Experiment 3: Different Classes with Same Image Set 
+
+			<br/><br/>
+
+			Experiment 4: Different People, Same Facial Expression
+
+			<br/><br/>
+
+
+			Experiment 5: Close versus Far, Different People
+
+
+			I trained the network on the same inanimate object as classes (bottle, notebook, and iPad) with the same background, and observed that all the top K images were from the a single class with a confidence of almost 100% for test images that were the same as the trained images. The same was observed for the bottle object placed very far away from the screen. However for images of notebook and iPad, the network was very confused as these objects are of the same shape but different color. 
+			<br/> <br/>
 
 			Experiment 2: With the same 3 classes as before, I trained the network with an object on one background and tested it on another background. I saw that the network had trained on the background and was unable to classify the object to its correct class. 
 
@@ -72,16 +95,27 @@
 
 		<h2> <b> Scaling the Confidence Values </b> </h2>
 
+		Task 1: The method computeConfidences() originally computes confidence values for each class by adding up the number of topK images in each class (nCounts) and dividing by K (kVal = 20 maximum). 
 
-		Look at the code in computeConfidences() and try to understand what it does. You can see that it computes the confidence for each class by just adding up the number of the TopK images in each class (the values of nCounts in the code) and dividing by K (the value of kVal).
+		I explored three alternative ways of computing the confidence.
 
-		For some applications, it might be better to scale the confidences, rather than just making them proportional to the number of TopK images. For example if class A has 10 TopK images, and B and C each have 5 images, it might be better to say that class A has confidence 1 and B and C have 0, rather than saying that A has confidence 0.5 and B and C each have 0.25 as things are now. For other applications, it might be more appropriate to divide the total confidence equally among all the classes that have at least one TopK image, or at least 2 TopK images.
-		<WRITEUP REQUIRED - Problem 5>
-		1. Modify the code in WebcamClassifier.js to experiment with different ways of computing confidences, such as weighted vs. not weighted. You might want to keep things so that confidence values can be interpreted as probabilities, that is, so that each value is between 0 and 1 and so that the confidences for all three classes sum to 1. But this is up to you. Write up and turn in your modifications.
+		A. Scaling the Condifences (Weighted Approach):
 
-		2. Using your modified confidence calculations, try some of the example scenarios that confused the network, that you looked at in section 2 and section 4. Does one of your new methods  perform better? Why/why not do you think so? Document and turn in the modified and unmodified results for a “confusing” example. Use screen capture to include images if appropriate.
 
-		3. What are some image classification situations where your alternative ways of confidences might come in useful?
+
+				weighted confidences: (confidence value for class X) = (number of matches in class X) / ((number of samples in class X) * (kVal)), scaled equally to sum the total confidences to 1
+
+		B. Rounding the Confidence
+
+		For this approach, I calculculated the confidence for each class as follows: round((number of topK images in specific class)/kVal)
+		
+
+
+		B. Equally Dividing the Confidence
+
+
+
+		
 
 
 		<h2> <b> Limiting the number of training examples per class </b> </h2>
