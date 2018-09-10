@@ -60,7 +60,7 @@
 		 	 <u> <i>Task 1:</u></i> I stored the variables <i> confidences</i> and <i>nCounts</i> in the global variables 
 		 	 <i>globConf</i> and <i>globNCounts</i> respectively and used the window.alert function to display a dialog with the number of closest matches and the confidence level. <br/><br/>
 
-			 <u><i>Task 2:<u> <i> After redoing the experiments from section 2, I observed the following (with support from confidences and top K values):
+			 <u><i>Task 2:</u></i> After redoing the experiments from section 2, I observed the following (with support from confidences and top K values):
 			<br/><br/>
 
 			Experiment 1: Inanimate Objects - I trained the network on the same inanimate object as classes (bottle, notebook, and iPad) with the same background, and observed that all the top K images were from the a single class with a confidence of almost 100% for test images that were the same as the trained images. 
@@ -85,7 +85,7 @@
 
 		I calculate the weighted confidence as follows:
 
-		confidence = confidence value for class X) = (number of matches in class X) / ((number of samples in class X) * (kVal)), scaled equally to sum the total confidences to 1
+		confidence = (number of matches in class X) / ((number of samples in class X) * (kVal)), scaled equally to sum the total confidences to 1
 
 		B. Rounding the Confidence
 
