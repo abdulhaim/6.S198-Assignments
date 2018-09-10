@@ -17,6 +17,7 @@ const IMAGE_SIZE = 227;
 const INPUT_SIZE = 1000;
 const TOPK = 20;
 const CLASS_COUNT = 3;
+const MAX_IMAGES = 300;
 
 const MEASURE_TIMING_EVERY_NUM_FRAMES = 20;
 
@@ -34,7 +35,8 @@ function passThrough() {
 }
 
 function onSpecialButtonClick() {
-  //FILL IN YOUR SPECIAL FUNCTION
+  alert('Number of the top ' + TOPK +  ' closest matches in each class: ' + globNCounts + '\n' + 'Confidence for which the image matches each class: ' + globConf);
+
 }
 
 class WebcamClassifier {
@@ -298,7 +300,7 @@ class WebcamClassifier {
         this.saveTrainingLogits(this.current.index);
       });
 
-      if(this.current.imagesCount === 150) {
+      if(this.current.imagesCount === MAX_IMAGES) {
         alert("You have reached the maximum number of images allowed for training.");
       }
       else {
@@ -382,28 +384,28 @@ class WebcamClassifier {
           nCounts[index] = classTopKMap[index];
 
           //Original Method
-          // const probability = classTopKMap[index] / kVal;
+          const probability = classTopKMap[index] / kVal;
 
           //Method 1
 
-          const probability = classTopKMap[index]/(copyClassExampleCount[index]*kVal)
+          // const probability = classTopKMap[index]/(copyClassExampleCount[index]*kVal)
 
           //Method 2
 
-          // if (nCounts[index] > 1) {
-          //     const probability = classTopKMap[index] / kVal;}
-          // else {
-          //    const probability = 0;
+          if (nCounts[index] > 1) {
+              const probability = classTopKMap[index] / kVal;}
+          else {
+             const probability = 0;
 
-          // }
+          }
         
 
           confidences[index] = probability;
         }
 
         // Change the two NULLs below to get the global values that can be used in onSpecialButtonClick
-        globConf = null;
-        globNCounts = null;
+        globConf = confidences;
+        globNCounts = nCounts;
  
         console.log('Number of the top ' + TOPK +  ' closest matches in each class: ' + nCounts);
         console.log('Confidence for which the image matches each class: ' + confidences);
