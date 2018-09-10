@@ -370,7 +370,6 @@ class WebcamClassifier {
         
         for (let index = 0; index < indices.length; index += 1) {
           classTopKMap[this.getClassFromIndex(indices[index])] += 1;
-          //this is the classTopKMap5,0,0
         }
 
         let nCounts = [0, 0, 0];
@@ -380,47 +379,26 @@ class WebcamClassifier {
           // Different ways of computing confidences 
 
           // Original Method
-
           nCounts[index] = classTopKMap[index];
           const probability = classTopKMap[index] / kVal;
-          confidences[index] = probability;
 
-
-          // //Method 1 - Weighted
-
-          // const probability_weight = classTopKMap[index]/(classExampleCount[index]*kVal)
+          //Method 1 - Weighted
+          const probability_weight = classTopKMap[index]/(classExampleCount[index]*kVal)
         
-          // // alternative #2 (selectively weighted confidences)
-          // if (nCounts[index] > 1) {
-          //   const probability = classTopKMap[index] / kVal;}
-          // else {
-          //   const probability = 0;
+          // Method 2 (selectively weighted confidences)
+          if (nCounts[index] > 1) {
+            const probability = classTopKMap[index] / kVal;}
+          else {
+            const probability = 0;
 
-          // }
-
-          // // alternative #3 (arbitrarily removing several top matches)
-          // const BUFFER = 3;
-          // nCounts[index] = Math.max(nCounts[index] - BUFFER, 0);
-          // const probability = classTopKMap[index] / kVal;
+          }
           
-          // confidences[index] = probability; 
+          confidences[index] = probability; 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-	      // Change the two NULLs below to get the global values that can be used in onSpecialButtonClick
+        // Change the two NULLs below to get the global values that can be used in onSpecialButtonClick
         globConf = confidences;
-	      globNCounts = nCounts;
+        globNCounts = nCounts;
  
         console.log('Number of the top ' + TOPK +  ' closest matches in each class: ' + nCounts);
         console.log('Confidence for which the image matches each class: ' + confidences);
