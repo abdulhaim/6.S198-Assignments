@@ -145,14 +145,40 @@
 
 		<br/><br/>
 
-		<img src="images/assignment_1/maximum_images.png" alt="Maximum Images" align="middle" height="400" width="400" /> <br/> <br/>
+		<img src="images/assignment_1/max_images.png" alt="Maximum Images" align="middle" height="400" width="400" /> <br/> <br/>
 
-		2. Once you’ve finished the  implementation, explore what happens if the number of training images for the classes is severely unbalanced. Try using both easy-to-classify cases and some of the cases that confused your system previously. 
+		<u><i>Task 2:</i></u> If the number of training images for the classes is severely unbalanced, the network classifies the image into the correct class with a confidence of up to 95%. For the cases that confused the system previously, putting a cap on the number of images will make the network misclassify images more frequently.
+
+		For easy-to-classify cases, the network still accurately classifies images with 99 percent confidence. But for the cases that confused the system previously, smaller sample size can only have that many top matches regardless of how strong the match is. In the confused cases, smaller sample size leads to false classification with high (incorrect) confidence. This problem is addressed in one of the alternatives proposed in part 5.
 
 		</p>
 		
 		<h2> <b> Further Explorations </b> </h2>
-		<h2> <b> Readings I Found Useful </b> </h2>
+
+		<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
+			<br/><br/>
+
+			<u><i>Task 1:</i></u> The first task was to adjust the k value and and see how this affects accuracy. I defined my classes as a smiling expression, a smiling expression (with teeth showing) and a confused expression. Increasing the k value from 20 to 100 with 100 images for each class for training decreased the confidence of classifying images correctly. For k = 20, the confidence were always above 90% whereas for k = 100 they all shifted between the 40%-50% range.
+
+			<br/><br/>
+
+			Below you can see the classification of when k = 100. 
+
+			<br/><br/>
+
+			<img src="images/assignment_1/change_k.png" alt="Maximum Images" align="middle" height="400" width="400" /> <br/> <br/>
+
+			<br/><br/>
+
+			<u><i>Task 2:</i></u> In this case, I observed my results after adding a class. I began with first adding smiling (without teeth) and a confused expression as classes and later added on smiling (with teeth). I found that adding a class confused the network even further as it was now shifting with low confidences between the smiling (without teeth) and the confused facial expression. This could be attributed to the fact that the images have more similarity between them and the network has less differences to use to distinguish between the images. 
+
+			<br/><br/>
+
+			<img src="images/assignment_1/add_class.png" alt="Maximum Images" align="middle" height="400" width="400" /> 
+
+			<br/> <br/>
+
 
 		</p>
 
