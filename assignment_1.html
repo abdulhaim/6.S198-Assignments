@@ -89,8 +89,6 @@
 
 		A. Scaling the Confidences (Weighted Approach):
 
-		<br/><br/>
-
 		I calculate the weighted confidence for each class as follows: <br/>
 
 		confidence for class X = (number of topK images for class X) / ((number of total images in class X) * (kVal))
@@ -98,15 +96,9 @@
 		<br/><br/>
 
 		B. Threshold for Confidence 
-
-		<br/><br/>
-
 		For this approach, the confidence for a class is greater than zero only if the number of topK images is greater than 1. For all classes that satisfy this condition, the total confidence is divided equally. <br/>
 
 		confidence for class X = (number of topK images for class X)/kVal
-	
-		<br/><br/> 
-
 
 		<br/><br/>
 
