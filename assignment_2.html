@@ -8,14 +8,13 @@
 		<h1> Assignment 2 </h1>
 		<h3> <i> Due Wednesday September 12th at 10 AM </i> </h3>
 
-
 		<h2> <b> 1.1: Building models with model builder (In-class Monday) </b> </h2>
 
 		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
 
 		   	<img src="images/assignment_2/invalid_model.png" alt="Teachable Machine" align="middle" height="200" width="400" />	
-		   	<br/> <br/>
 
+		   	<br/> <br/>
 
 		    On the leftmost column of Model Builder, the initial model is marked Invalid Model. This model is invalid as the output from the Input Image layer ([28,28,1]) does not match with the input of the Softmax Cross-Entropy layer layer ([10]).
 
@@ -23,10 +22,11 @@
 
 		   <img src="images/assignment_2/wrong_classification.png" alt="Teachable Machine" align="middle" height="200" width="400" />
 
+		   <br/> <br/>
+
 		   Problem 1: The classifications above that we are seeing are almost always wrong. This is because the parameters as part of the equation <i> Wx + b </i> are randomly initialized and not trained further to find optimal values. Hence we see that the network has a classfication rate of approx 10-15%, which is what would be expect as it equivalent to choosing a label at random from the 10 options avaliable. 
 
 		   <br/> <br/>
-
  
 			</p>
 
@@ -38,9 +38,16 @@
 
 			1. Here are the observations made for training MNIST, CIFAR-10, and Fashion MNIST respectively:
 
+			<br/> <br/>
 
 			<img src="images/assignment_2/mnist_simple.png" alt="Teachable Machine" align="middle" height="200" width="400" />	
+
+			<br/> <br/>
+
 			MNIST: Training accuracy ranges from 80%-92% with the demo making approximately 1170 inferences per second. The model trains 1230 examples/second as shown in the visuals above.
+
+			<br/> <br/>
+
 
 			<img src="images/assignment_2/fashion_mnist_simple.png" alt="Teachable Machine" align="middle" height="200" width="400" />
 
@@ -52,6 +59,7 @@
 
 
 			<img src="images/assignment_2/cifar_simple.png" alt="Teachable Machine" align="middle" height="200" width="400" />	
+
 		   <br/> <br/>
 
 			2. After changing the dataset to CIFAR-10, I observed a training accuracy ranging from 32%-45% with the demo making approximately 705 inferences per second. The model trains 1030 examples/second as shown in the visuals above.
@@ -59,18 +67,19 @@
 			<br/> <br/>
 
 			3. The Fully Connected Unit layer Added is shown here:
+		   	
+		   	<br/> <br/>
 
 			<img src="images/assignment_2/mnist_fully_connected.png" alt="Teachable Machine" align="middle" height="200" width="400" />	
 
-		   <br/> <br/>
+		   	<br/> <br/>
 
 			4. Changing back to MNIST, we try to improve the accuracy by adding more fully connected units, one on top of the other as such: Input → Flatten → FC(10) → FC(10) → Softmax → Label
 
 			The accuracy goes to zero and the network performs terribly. The inference probability also becomes Nan% for the images. This is due to having two Fully Connected Layers one after the other in the network, which causes the network to diverge and leads to exploding gradients. In order to correct this, we should add a non-linear layer such as RELU instead of putting two linear layers one after the other. 
 
-
-
 			</p>
+
 		<h2> <b> 1.4: Activation Layers </b> </h2>
 
 			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
@@ -99,8 +108,6 @@
 
 
 			<img src="images/assignment_2/change_fc_units.png" alt="Teachable Machine" align="middle" height="200" width="400" />
-
-
 
 			</p>
 
