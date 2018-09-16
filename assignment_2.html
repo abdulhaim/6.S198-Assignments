@@ -48,7 +48,6 @@
 
 			<br/> <br/>
 
-
 			<img src="images/assignment_2/fashion_mnist_simple.png" alt="Teachable Machine" align="middle" height="200" width="400" />
 
 			<br/> <br/>
@@ -57,10 +56,9 @@
 
 			<br/> <br/>
 
-
 			<img src="images/assignment_2/cifar_simple.png" alt="Teachable Machine" align="middle" height="200" width="400" />	
 
-		   <br/> <br/>
+		    <br/> <br/>
 
 			2. After changing the dataset to CIFAR-10, I observed a training accuracy ranging from 32%-45% with the demo making approximately 705 inferences per second. The model trains 1030 examples/second as shown in the visuals above.
 
@@ -106,12 +104,115 @@
 
 			<br/> <br/>
 
-
 			<img src="images/assignment_2/change_fc_units.png" alt="Teachable Machine" align="middle" height="200" width="400" />
 
 			</p>
 
+			<h2> <b> 1.6: Exploring with Model Builder </b> </h2>
 
+			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
+			Problem 4: 
+			
+			<br/> <br/>
+
+			1. After training the MNIST model with 1,2,3,4 and 5 FC layers (and ReLU between them and the same hyperparameters and number of hidden units), I found a training time of blank and an acccuracy time of blank as shown below.
+
+			<br/> <br/>
+
+			The model seems to overfit for What were the training times and accuracy? Do you see any overfitting? What can you conclude about how many layers to use? Include screenshots of the Training Stats for each of your examples.
+
+			</p>
+
+			<h2> <b> 2.1: Setting Up to code Multilayer Models</b> </h2>
+
+			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
+			Problem 5: 
+
+			As you increase the NUM_BATCHES from 50 to 300, the loss converges to a lower value. Increasing the BATCH_SIZE does not cause any effect in the loss but causes less variation in the loss. In general, I see that as you increase on or the other the training time increases.
+
+			</p>
+
+			<h2> <b> 2.2: Training and Testing </b> </h2>
+
+			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
+
+			TEST_ITERATION_FREQUENCY determines the number of batches the model trains on between tests. TEST_BATCH_SIZE determines how many images the test is run on each time. 
+
+			<br/> <br/>
+
+			Problem 6
+
+			1. Examples of classifications where the system does poorly/is wrong include when the numbers are bolded/have a thick font size or when they are not proportionate.
+
+			<img src="images/assignment_2/misclassify.png" alt="Teachable Machine" align="middle" height="200" width="400" />
+
+ 			<br/> <br/>
+
+			2. I experimented with changing the batch size and the number of batches to try to improve the testing results. Overall, I observed that increasing the batch size and the number of batches increases the last accuracy value. However, increasing both increases the time in which it takes to train the model, so I tried to find combinations that would bring similar results.
+
+			<img src="images/assignment_2/300_200.png" alt="Teachable Machine" align="middle" height="200" width="400" />
+
+			Below you can see the highly last accuracy value of 82% with a batch size of 300 and a number of batches value of 200. This accuracy value is pretty consistent for high values of these two variables. However when the batch size is 30 and the number of batches value is 100, we get an accuracy value of 80% although this is not a very consistent result. 
+
+		   <br/> <br/>
+
+			I also tried a batch size of 30 and a high number of batches value of 200 and got an accuracy result of 96.67%.  
+
+			<br/> <br/>
+
+
+			3. To add a ReLU layer after a dense layer, use the dense layer’s activation parameter, rather than explicitly adding a separate layer, as the following: 
+
+			model.add(tf.layers.dense({
+			  units: 10,
+			  activation: 'relu', 
+			  kernelInitializer: 'varianceScaling'
+			}));
+
+			<img src="images/assignment_2/layers.png" alt="Teachable Machine" align="middle" height="200" width="400" />
+
+
+			I made the model more complex by adding 2 more additional layers (3 Fully Connected layers of 100 units each, with RELU layers in between). I got an accuracy of 82% with a batch size value of 100 and a number of batches value of 300.
+
+			<br/> <br/>
+
+			<img src="images/assignment_2/mnist_many_layers_performance.png" alt="Teachable Machine" align="middle" height="200" width="400" />
+
+			After exploring with MNIST, I tried the same network with the Fashion MNIST data (with higher values for the two parameters of 300 for batch size and 400 for the number of batches respectively) as shown below: 
+
+			<br/> <br/>
+
+			<img src="images/assignment_2/fashion_mnist.png" alt="Teachable Machine" align="middle" height="200" width="400" />
+
+
+			</p>
+
+			<h2> <b> 2.3: Style Transfer Example </b> </h2>
+
+			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
+			Style transfer is an application of convolutional neural networks. Given a content image and a style (another image), we can apply a computation that transforms the content to match the selected style.
+
+			Here are some of the examples I created on DeepArt:
+
+
+			<img src="images/assignment_2/deep_art_1.png" alt="Teachable Machine" align="middle" height="200" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_2/deep_art_2.png" alt="Teachable Machine" align="middle" height="200" width="400" />
+
+
+
+
+
+			</p>
+
+
+		</body>
 
 
 
