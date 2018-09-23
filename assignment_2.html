@@ -8,6 +8,14 @@
 		<h1> Assignment 2 </h1>
 		<h3> <i> Due Wednesday September 12th at 10 AM </i> </h3>
 
+		The demo for this assignment can be found here: 
+
+		<br/> <br/>
+
+		https://courses.csail.mit.edu/6.s198/spring-2018/model-builder/src/model-builder/ 
+
+		 <br/> <br/>
+
 		<h2> <b> 1.1: Building models with model builder (In-class Monday) </b> </h2>
 
 		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
@@ -100,7 +108,7 @@
 
 			<br/> <br/>
 
-			However after increasing the number of units of the first FC model from 10 to 100, we see a noticable difference as seen below. The training and test accuracy is approximately 93%-98%, much higher than previously. This can be explained by 
+			However after increasing the number of units of the first FC model from 10 to 100, we see a noticable difference as seen below. The training and test accuracy is approximately 93%-98%, much higher than previously. There is a noticable difference as you increase the time given for training the network.  
 
 			<br/> <br/>
 
@@ -116,11 +124,56 @@
 			
 			<br/> <br/>
 
-			1. After training the MNIST model with 1,2,3,4 and 5 FC layers (and ReLU between them and the same hyperparameters and number of hidden units), I found a training time of blank and an acccuracy time of blank as shown below.
+			1. After training the MNIST model with 1,2,3,4 and 5 FC layers (and ReLU between them and the same hyperparameters and number of hidden units) for approximately 30,000 examples, I found a training time and acccuracy time of the following:
+
+			1 FC Layer: Training Time: 48.5 sec, Accuracy: 85% 
+
+		    <br/> <br/>
+
+			<img src="images/assignment_2/1_FC_Layer.png" alt="Teachable Machine" align="middle" height="200" width="400" />	
+
+			<br/> <br/>
+			2 FC Layer: Training Time: 57.0 sec, Accuracy: 60%
 
 			<br/> <br/>
 
-			The model seems to overfit for What were the training times and accuracy? Do you see any overfitting? What can you conclude about how many layers to use? Include screenshots of the Training Stats for each of your examples.
+			<img src="images/assignment_2/2_FC_Layer.png" alt="Teachable Machine" align="middle" height="200" width="400" />	
+
+			<br/> <br/> 
+
+			3 FC Layer: Training Time: 83 sec, Accuracy: 80% 
+
+			<br/> <br/>
+
+			<img src="images/assignment_2/3_FC_Layer.png" alt="Teachable Machine" align="middle" height="200" width="400" />	
+
+			<br/> <br/>
+
+			4 FC Layer: Training Time: 106.4 sec, Accuracy: 82% 
+
+		    <br/> <br/>
+
+			<img src="images/assignment_2/4_FC_Layer.png" alt="Teachable Machine" align="middle" height="200" width="400" />	
+
+			<br/> <br/>
+			5 FC Layer: Training Time: 114.1 sec, Accuracy: 60-70%
+
+			<br/> <br/>
+
+			<img src="images/assignment_2/5_FC_Layer.png" alt="Teachable Machine" align="middle" height="200" width="400" />	
+
+			<br/> <br/>
+
+			I did observe overfitting when the training accuracy overshot the test accuracy.
+
+			2. I built a model with 3 FC layers, with ReLU between them, and made the first layer wide and the second narrow, and vice versa, using the same hyperparameters as before. I found the network with the first layer being wide and the second narrow to perform better. This is probably because the network is more general in the beggining and needs to explore all regions before looking for more specific features which requires a smaller layer. 
+
+			<br/> <br/>
+
+
+			3. After trying the same procedure with the Fashion MNIST and CIFAR-10 datasets, I observed that it took longer to achieve high accuracy for the Fashion MNIST Dataset with more layers as well as the CIFAR-10 Dataset. 
+
+			<br/> <br/>
 
 			</p>
 
@@ -219,10 +272,6 @@
 			<br/> <br/>
 
 			<img src="images/assignment_2/deep_art_2.png" alt="Teachable Machine" align="middle" height="200" width="600" />
-
-
-
-
 
 			</p>
 
