@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 3</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<h1> Assignment 3 </h1>
+		<h3> <i> Due Monday September 24th at 10 AM </i> </h3>
+
+		<br/> <br/>
+
+		We will be using this demo for the majority of this assignment found here: 
+
+		<br/> <br/>
+		http://scs.ryerson.ca/~aharley/vis/conv/flat.html 
+
+		<h2> <b> 1.4: Visualizing convolutional neural networks</b> </h2>
+
+		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
+		   	The visualization demo by Adam Harley shows a network with 2 convolutional layers, two fully connected layers, and two max pool layers (for downsampling).
+
+		   	After playing with the demo and drawing different kinds of inputs with various features, I observed the following: 
+
+		   	1. The network works pretty well for a number that is drawn perfectly straight on the screen.
+
+		   	<br/> <br/>
+
+			<img src="images/assignment_3/perfect_number.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+		   	2. The network is unable to decipher what the number is if it is even a bit slanted.
+
+		   	<br/> <br/>
+
+			<img src="images/assignment_3/slanted_number.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+		   	3. The network is unable to decipher what the number is if it is upside down.
+
+
+		   	<br/> <br/>
+
+			<img src="images/assignment_3/upside_down_number.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+		   	4. The network is able to recognize only some numbers when they are bolded. 
+
+
+		   	<br/> <br/>
+
+			<img src="images/assignment_3/thick_number.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_3/thick_number_2.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_3/thick_number_3.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+
+		   	5. For a completely colored in image, the network spits out "1". This was consistent behaviour.
+
+
+			<img src="images/assignment_3/white_image.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+
+			It also spits out a random number for invalid inputs. 
+
+			<br/> <br/>
+
+
+			<img src="images/assignment_3/invalid.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			6. The network gets easily confused for unclear numbers 
+
+			<img src="images/assignment_3/not_clear.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+
+		   </p>
+
+			<h2> <b> 2. Style Transfer Examples </b> </h2>
+
+			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
+			Style transfer is an application of convolutional neural networks. Given a content image and a style (another image), we can apply a computation that transforms the content to match the selected style.
+
+			Here are some of the examples I created on DeepArt:
+
+			<br/> <br/>
+
+			<img src="images/assignment_2/deep_art_1.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_2/deep_art_2.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+			
+			</p>
+
+			<h2> <b> 3.5: Fast Style Transfer </b> </h2>
+
+			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
+			Use the demo site at Fast Neural Style Transfer with Deeplearn.JS (a precursor to Tensorflow.js) at
+
+			https://reiinakano.github.io/fast-style-transfer-deeplearnjs
+
+			to generate some examples using the pre-computed styles.   You can choose from the provided content images, or upload your own images, or even use the camera.   Save screenshots of some examples to submit with your homework for each of the following cases:
+
+			1. What happens when you pass an image through the same filter several times? Do you observe any interesting characteristics or padding artifacts?
+
+			2. Apply a filter to an image and then apply another filter to that already-filtered image. Is the result similar to what you would get when you apply the second filter to the original image?
+
+			3. Try different combinations of filters and number of times you filter an image. Note on your website if you have any interesting observations or insights.
+
+
+			</p>
+
+
+			<h2> <b> 3.6 Building CNNs with code </b> </h2>
+
+			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
+			<WRITEUP REQUIRED>
+			Similar to the work you did with Model Builder on Monday, investigate several choices of architectures and hyperparameters for classifying images from MNIST, Fashion MNIST, and CIFAR_10 working from your .js and .html files from last week.  You’ll need to change the code where it says “Building the model” to construct new networks of your choice.  In addition to the constructor functions from last week, the .js code already has functions for adding convolutional and max pool layers.  For the following 4 questions, describe what architectures you implemented and take screenshots of the results you got for each dataset (MNIST, Fashion MNIST, and CIFAR).
+
+			1. Try changing the learning rate, batch size, and number of batches. Make sure that these numbers are reasonable to start (i.e. won't take too long to run on your computer).
+
+			2. Try changing some of the other parameters like field size, stride, output, …
+
+			3. Do you have a hypothesis for why CIFAR-10 is so much harder to train on than Fashion MNIST and MNIST (i.e. it’s more difficult to achieve a 90%+ accuracy) while Fashion MNIST has similar training times to MNIST (even though Fashion MNIST is more complex than MNIST)?
+
+			4. How does adding more convolutional layers relate to accuracy and training speed? Is there a point at which adding more layers plateaus or even decreases the maximum accuracy you are able to achieve with that model?
+
+			5. Challenge: Are you able to find an architecture/combination of techniques that can get you to 60% accuracy on CIFAR-10 within 1 minute of training? 5 minutes? 10 minutes?
+
+			<WRITEUP REQUIRED>
+			6. Add code that captures some performance statistic from a testing run.  For example, you might keep track of the fraction of examples where the prediction was correct , or perhaps do something more detailed that takes the predicted probabilities into account.  Hint: Look near the end of the file where the testing results are logged. Using your performance metrics, compare some of the different models you built above.  Write a brief report with screenshots showing the choices and the results.
+
+			<WRITEUP REQUIRED>
+			7. Add links to your code files on your website (please make sure these are text files and not screenshots so that the graders can run your code if necessary).
+
+
+
+			</p>
+
+
+		</body>
+
+
+
+	</body>
+
+</html>
+
+
+
+
+
