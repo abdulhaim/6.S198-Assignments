@@ -8,18 +8,14 @@
 		<h1> Assignment 3 </h1>
 		<h3> <i> Due Monday September 24th at 10 AM </i> </h3>
 
-		<br/> <br/>
-
-		We will be using this demo for the majority of this assignment found here: 
-
-		<br/> <br/>
-		http://scs.ryerson.ca/~aharley/vis/conv/flat.html 
 
 		<h2> <b> 1.4: Visualizing convolutional neural networks</b> </h2>
 
 		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
 
-		   	The visualization demo by Adam Harley shows a network with 2 convolutional layers, two fully connected layers, and two max pool layers (for downsampling).
+		   	The visualization demo below by Adam Harley shows a network with 2 convolutional layers, two fully connected layers, and two max pool layers (for downsampling).
+
+		   	http://scs.ryerson.ca/~aharley/vis/conv/flat.html 
 
 		   	After playing with the demo and drawing different kinds of inputs with various features, I observed the following: 
 
@@ -27,7 +23,7 @@
 
 		   	<br/> <br/>
 
-			<img src="images/assignment_3/perfect_number.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+			<img src="images/assignment_3/perfect_number.png" alt="Teachable Machine" align="middle" height="300" width="300" />
 
 			<br/> <br/>
 
@@ -35,7 +31,7 @@
 
 		   	<br/> <br/>
 
-			<img src="images/assignment_3/slanted_number.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+			<img src="images/assignment_3/slanted_number.png" alt="Teachable Machine" align="middle" height="300" width="300" />
 
 			<br/> <br/>
 
@@ -44,7 +40,7 @@
 
 		   	<br/> <br/>
 
-			<img src="images/assignment_3/upside_down_number.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+			<img src="images/assignment_3/upside_down_number.png" alt="Teachable Machine" align="middle" height="300" width="300" />
 
 			<br/> <br/>
 
@@ -53,15 +49,15 @@
 
 		   	<br/> <br/>
 
-			<img src="images/assignment_3/thick_number.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+			<img src="images/assignment_3/thick_number.png" alt="Teachable Machine" align="middle" height="300" width="300" />
 
 			<br/> <br/>
 
-			<img src="images/assignment_3/thick_number_2.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+			<img src="images/assignment_3/thick_number_2.png" alt="Teachable Machine" align="middle" height="300" width="300" />
 
 			<br/> <br/>
 
-			<img src="images/assignment_3/thick_number_3.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+			<img src="images/assignment_3/thick_number_3.png" alt="Teachable Machine" align="middle" height="300" width="300" />
 
 
 		   	5. For a completely colored in image, the network spits out "1". This was consistent behaviour.
@@ -88,7 +84,7 @@
 			<br/> <br/>
 
 
-		   </p>
+		    </p>
 
 			<h2> <b> 2. Style Transfer Examples </b> </h2>
 
@@ -112,18 +108,74 @@
 
 			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
 
-			Use the demo site at Fast Neural Style Transfer with Deeplearn.JS (a precursor to Tensorflow.js) at
+			We use the Fast Neural Style Transfer link below for the following question: 
 
 			https://reiinakano.github.io/fast-style-transfer-deeplearnjs
 
-			to generate some examples using the pre-computed styles.   You can choose from the provided content images, or upload your own images, or even use the camera.   Save screenshots of some examples to submit with your homework for each of the following cases:
+			1. When passing an image through the same filter several times, I noticed that the image changes drastically in the first pass and doesnt change much after passing the filter a 3rd and 4th time. The details in the image get blurred out. 
 
-			1. What happens when you pass an image through the same filter several times? Do you observe any interesting characteristics or padding artifacts?
+			<img src="images/assignment_3/first_filter.png" alt="Teachable Machine" align="middle" height="200" width="600" />
 
-			2. Apply a filter to an image and then apply another filter to that already-filtered image. Is the result similar to what you would get when you apply the second filter to the original image?
+			<br/> <br/>
 
-			3. Try different combinations of filters and number of times you filter an image. Note on your website if you have any interesting observations or insights.
+			<img src="images/assignment_3/second_filter.png" alt="Teachable Machine" align="middle" height="200" width="600" />
 
+			<br/> <br/>
+
+			<img src="images/assignment_3/third_filter.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_3/fourth_filter.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+
+			2. The next task that I did is to apply the filter "Rain Princess, Leonid Afremov" to the image above and then apply "The Wave - Katsushika Hokusai" filter to the resulting image from the first filter. The first image has only only the Katsushika Hokusai filter applied, whereas the second picture has both filters applied. 
+
+			<img src="images/assignment_3/diana_transfer1.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<img src="images/assignment_3/diana_transfer2.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			The result is not similar to applying the second filter to the original image as the image has already been transformed by the first filter. The style may be the same but there are different features and details in the two images as shown. 
+
+			<br/> <br/>
+
+			3. Here I have tried different combinations of filters/number of times I filter the image.
+
+
+			Trial 1: Image filtered with "Rain Princess", "La Muse", "Udnie", "The Wreck of the Minotaur", "The Wave" and "The Scream" respectively. We start with the original image below. The final image does not looks very different to what it would have looked like had we only applied "The Scream" filter (the last image shown in this series).
+
+			<br/> <br/>
+
+			<img src="images/assignment_3/0.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_3/1.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+
+			<img src="images/assignment_3/2.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_3/3.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_3/4.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_3/5.png" alt="Teachable Machine" align="middle" height="200" width="600" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_3/the_scream.png" alt="Teachable Machine" align="middle" height="200" width="600" />
 
 			</p>
 
