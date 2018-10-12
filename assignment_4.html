@@ -27,7 +27,7 @@
 
 			<br/> <br/>
 
-		   	<img src="images/assignment_4/pca_cloud.png" alt="Corr Map" align="middle" height="300" width="400" />
+		   	<img src="images/assignment_4/pca_cloud.png" alt="Corr Map" align="middle" height="300" width="500" />
 
 			<br/> <br/>
 
@@ -35,7 +35,7 @@
 
 			<br/> <br/>
 
-		   	<img src="images/assignment_4/t-SNE.png" alt="Corr Map" align="middle" height="300" width="400" />
+		   	<img src="images/assignment_4/t-SNE.png" alt="Corr Map" align="middle" height="300" width="350" />
 
 			<br/> <br/>
 
@@ -59,7 +59,7 @@
 
 			<br/> <br/>
 
-		   	<img src="images/assignment_4/1.3_islam.png" alt="Corr Map" align="middle" height="300" width="400" />
+		   	<img src="images/assignment_4/1.3_islam.png" alt="Corr Map" align="middle" height="300" width="500" />
 
 			<br/> <br/>
 
@@ -67,7 +67,7 @@
 
 			<br/> <br/>
 
-		   	<img src="images/assignment_4/1.3_engineer.png" alt="Corr Map" align="middle" height="300" width="400" />
+		   	<img src="images/assignment_4/1.3_engineer.png" alt="Corr Map" align="middle" height="300" width="500" />
 
 			<br/> <br/>
 
@@ -87,15 +87,15 @@
 
 			<br/> <br/>
 
-			<img src="images/assignment_4/Works_Well_Jesus_Allah.png" alt="Corr Map" align="middle" height="300" width="400" />
+			<img src="images/assignment_4/Works_Well_Jesus_Allah.png" alt="Corr Map" align="middle" height="200" width="500" />
 
 			<br/> <br/>
 
-			<img src="images/assignment_4/Work Well_Christianity_Islam.png" alt="Corr Map" align="middle" height="300" width="400" />
+			<img src="images/assignment_4/Work Well_Christianity_Islam.png" alt="Corr Map" align="middle" height="200" width="500" />
 
 			<br/> <br/>
 
-			<img src="images/assignment_4/girl_boy.png" alt="Corr Map" align="middle" height="300" width="400" />
+			<img src="images/assignment_4/girl_boy.png" alt="Corr Map" align="middle" height="200" width="500" />
 
 			<br/> <br/>
 
@@ -103,11 +103,11 @@
 
 			<br/> <br/>
 
-			<img src="images/assignment_4/order_matters_normal.png" alt="Corr Map" align="middle" height="300" width="400" />
+			<img src="images/assignment_4/order_matters_normal.png" alt="Corr Map" align="middle" height="200" width="500" />
 
 			<br/> <br/>
 
-			<img src="images/assignment_4/order_matters.png" alt="Corr Map" align="middle" height="300" width="400" />
+			<img src="images/assignment_4/order_matters.png" alt="Corr Map" align="middle" height="200" width="500" />
 
 			<br/> <br/>
 
@@ -124,14 +124,132 @@
 
 		   	Problem 4: Navigate to this link to look at different embedding spaces for fonts: goo.gl/F3tjgs.
 
+		   	<br/> <br/>
+
 			1. View the fonts with PCA embedding. Do you see any clumps/areas with obvious characteristics? Record a few Font IDs for distinct characteristics/groupings that you find interesting (hover over a character to get its font ID), such as bold, italics, cursive...etc. You will use this in the homework.
+
+			<br/> <br/>
+
+			Some of the clumps I see if for fonts that have more white area in the image. Some of the font IDs for distinct characteristics/groupings include those that are mostly black (5925, 5352) or those that are not of any font but are straight lines (4814 and 4829).
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/clump.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
 
 			2. Change to the embedding to T-SNE. Record how many iterations you let T-SNE run for for and whether or not you were able to get interesting groupings. Again, record Font IDs for interesting fonts/groupings.
 
+			<br/> <br/>
+
+			I let T-SNE run for 250 iterations and got a couple of interesting groups as shown:
+
+			<br/> <br/>
+
+			Clump 1: (Font IDs 7018, 433, 4854) - Tilted Font 
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/clump1.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			Clump 2: (Font IDs 7835, 2811, 4417) - Very Bolded Font 
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/clump1.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
 			3. Find a font you like, get its ID, and type that into the search bar at the right-hand side of the screen. Use the "neighbors" slider to isolate a few dozen points and record the Font IDs of the 10 nearest neighbors that make sense. Repeat this for 3 or 4 fonts. If you find a font that doesn't have nearest neighbors that look similar, note that down as well.
 
+			<br/> <br/>
+
+			Chosen Font: 6835. 10 Nearest Neighbors: 4720, 4749, 3438, 65, 2477, 5309, 6223, 3441, 2871, 4919, 
+
+			<br/> <br/>
+
+			Chosen Font: 3659. 10 Nearest Neighbors: 7440, 2154, 7134, 96, 7439, 72, 4065, 2609, 6058, 7243 
+
+			<br/> <br/>
+
+			Chosen Font: 5926. 10 Nearest Neighbors: 5925, 1627, 2182, 2180, 2818, 5753, 5313, 3730, 3722, 4619
+
+			<br/> <br/>
 
 			</p>
+
+			<h2> <b> 2.3: Creating New Fonts  </b> </h2>
+
+		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+			
+			You will be modifying the latent space explorer code to create new fonts with various characteristics. 
+
+			<br/> <br/>
+
+			0. Edit FontModel.js so another character besides "r" is being displayed as the sample character for the 40 attributes. Edit Alphabet.vue so that all of the uppercase, lowercase, and numerical sample font characters are displayed in the right side of the screen instead of just the lowercase characters. Take a screenshot for your writeup.
+
+			<br/> <br/>
+
+			I changed the character displayed as the sample character for the 40 attributes from r to m. I also edited Alphabet.vue so that all of the uppercase, lowercase, and numerical sample font characters are displayed in the right side of the screen instead of just the lowercase characters.
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/problem_0.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			1. Edit VectorChooser.vue to add a new button under the "Apply vector math" button. The new button should show the font Id of the "nearest neighbor" font that is "most similar to" the current font, out of all the fonts in the 50K training set.
+
+			<br/> <br/>
+
+			The new button is shown below.
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/problem_1.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			The file deeplearnjs/demos/latent-space-explorer/embeddings.json contains a large array where the 0th element is the 40-dim vector for font Id 0 and so on for all 50K fonts.
+
+			<br/> <br/>
+
+			As mentioned in lecture for  Assignment 1, the similarity of two vectors can be taken to be the "cosine similarity" which ranges between 0 and 1. This can be  computed as the absolute value of the dot product of the two vectors, divided by the product of the norms of the two vectors. Compute the similarities of the current font to each of the 50K fonts.  Use console.log to record the similarity values and the font IDs as you generate them.
+
+			<br/> <br/>
+
+			The similarity shown on the console is displayed here: 
+
+
+			<br/> <br/>
+
+			When you obtain the nearest neighbor Font Id,  navigate to the Font Finder website at https://courses.csail.mit.edu/6.s198/spring-2018/fontfinder/.  This is an app that lets you input a font Id and shows you the font. Document your work in your writeup and show a few examples.   Can you find examples of nearest neighbor fonts  that don't make sense?
+
+2. What is the “average” of a set of fonts? (Hint: What does that mean in terms of the 40 dimensions)? Write some code to Find the nearest font neighbor to the average font. 
+
+3. Similar to Monday's word analogy exercise, we will now be working with font analogies. Feel free to use the Font Finder website to explore different fonts and obtain their attribute vectors.
+
+a. Here is a basic "bolding vector" that Natalie obtained by getting the vector of thickest font in the “Saved Sample” space:
+
+“0.053,0.026,-0.060,-0.014,-0.093,-0.018,0.087,0.096,-0.039,0.071,0.111,-0.022,-0.007,0.022,-0.032,0.141,0.126,-0.015,-0.075,0.120,0.068,0.021,0.104,-0.065,-0.085,-0.018,-0.038,-0.059,-0.051,-0.056,0.154,-0.044,-0.116,0.038,-0.144,-0.103,-0.032,0.059,-0.076,-0.030”
+
+Try to add this vector to any font. You may do the basic vector math by modifying the “Apply Vector Math” button in VectorChooser.vue or adding a new button/functionality. 
+
+What does adding this vector to a font do? Does it perform bolding well at thickening the original font? Are there other characteristics that seem to also carry over? Try this with another characteristic. It may be helpful to use the characteristics you gathered previously.
+
+b. Find 10 fonts for a specific quality (i.e. bolding, dotting, fancy, serif...etc) and average them out to find a characteristic vector (for example, “bolding vector”). Try applying that vector to another font. Again, you can do this by manual computation and then modifying the added vector in the "Apply Vector Math" button, or you can make new buttons. Does it work better or worse than the previous one-sample method? Try this with at least 2 characteristics.
+
+c. Find 10 fonts the exhibit for a specific characteristic and 10 fonts for the opposite of that characteristic (i.e. bold vs. corresponding non-bold). Subtract the vectors for each pair and take the average difference. How does this work as a vector for the characteristic (e.g., as a "bolding vector")?   Does this work better or worse than the method above to obtain your desired characteristic? Try this with at least 2 characteristics.
+
+4. Can you figure out how to create a vector that makes uppercase fonts lowercase? (Hint: You can try finding fonts that only have uppercase/lowercase characters and finding analogous vectors, or you can try playing with the 40 attribute sliders directly.)
+
+5. Can you create a vector based on your personal font tastes (i.e. a personal-likeable vector)? Please also make note of any interesting vector directions you find.
+
+6. Link your code in a text-readable format with your submission.
+
+		   </p>
 
 		</body>
 
