@@ -95,7 +95,7 @@
 
 			<br/> <br/>
 
-			<img src="images/assignment_4/girl_boy.png" alt="Corr Map" align="middle" height="200" width="500" />
+			<img src="images/assignment_4/girl_boy.png" alt="Corr Map" align="middle" height="100" width="600" />
 
 			<br/> <br/>
 
@@ -107,13 +107,13 @@
 
 			<br/> <br/>
 
-			<img src="images/assignment_4/order_matters.png" alt="Corr Map" align="middle" height="200" width="500" />
+			<img src="images/assignment_4/order matters.png" alt="Corr Map" align="middle" height="200" width="500" />
 
 			<br/> <br/>
 
 			If the relationship between the first two words is not clear, the model returns the most similar word or the same word as shown below:
 
-			<img src="images/assignment_4/dummy.png" alt="Corr Map" align="middle" height="300" width="400" />
+			<img src="images/assignment_4/dummy.png" alt="Corr Map" align="middle" height="200" width="500" />
 
 
 		   </p>
@@ -134,7 +134,7 @@
 
 			<br/> <br/>
 
-			<img src="images/assignment_4/clump.png" alt="Corr Map" align="middle" height="300" width="400" />
+			<img src="images/assignment_4/clump.png" alt="Corr Map" align="middle" height="200" width="400" />
 
 			<br/> <br/>
 
@@ -188,7 +188,11 @@
 
 			<br/> <br/>
 
-			0. Edit FontModel.js so another character besides "r" is being displayed as the sample character for the 40 attributes. Edit Alphabet.vue so that all of the uppercase, lowercase, and numerical sample font characters are displayed in the right side of the screen instead of just the lowercase characters. Take a screenshot for your writeup.
+			Problem 0: 
+
+			<br/> <br/>
+
+			Edit FontModel.js so another character besides "r" is being displayed as the sample character for the 40 attributes. Edit Alphabet.vue so that all of the uppercase, lowercase, and numerical sample font characters are displayed in the right side of the screen instead of just the lowercase characters. Take a screenshot for your writeup.
 
 			<br/> <br/>
 
@@ -200,7 +204,11 @@
 
 			<br/> <br/>
 
-			1. Edit VectorChooser.vue to add a new button under the "Apply vector math" button. The new button should show the font Id of the "nearest neighbor" font that is "most similar to" the current font, out of all the fonts in the 50K training set.
+			Problem 1: 
+
+			<br/> <br/>
+
+			Edit VectorChooser.vue to add a new button under the "Apply vector math" button. The new button should show the font Id of the "nearest neighbor" font that is "most similar to" the current font, out of all the fonts in the 50K training set.
 
 			<br/> <br/>
 
@@ -216,38 +224,58 @@
 
 			<br/> <br/>
 
-			As mentioned in lecture for  Assignment 1, the similarity of two vectors can be taken to be the "cosine similarity" which ranges between 0 and 1. This can be  computed as the absolute value of the dot product of the two vectors, divided by the product of the norms of the two vectors. Compute the similarities of the current font to each of the 50K fonts.  Use console.log to record the similarity values and the font IDs as you generate them.
+			As mentioned in lecture for  Assignment 1, the similarity of two vectors can be taken to be the "cosine similarity" which ranges between 0 and 1. This can be  computed as the absolute value of the dot product of the two vectors, divided by the product of the norms of the two vectors. Compute the similarities of the current font to each of the 50K fonts.  We use console.log to record the similarity values and the font IDs as you generate them.
 
 			<br/> <br/>
 
 			The similarity shown on the console is displayed here: 
 
+			<br/> <br/>
+
+			<img src="images/assignment_4/nearest_font_score.png" alt="Corr Map" align="middle" height="300" width="400" />
 
 			<br/> <br/>
 
-			When you obtain the nearest neighbor Font Id,  navigate to the Font Finder website at https://courses.csail.mit.edu/6.s198/spring-2018/fontfinder/.  This is an app that lets you input a font Id and shows you the font. Document your work in your writeup and show a few examples.   Can you find examples of nearest neighbor fonts  that don't make sense?
+			After navigating to the website: https://courses.csail.mit.edu/6.s198/spring-2018/fontfinder/.  
 
-2. What is the “average” of a set of fonts? (Hint: What does that mean in terms of the 40 dimensions)? Write some code to Find the nearest font neighbor to the average font. 
+			We see the nearest neighbor font below:
 
-3. Similar to Monday's word analogy exercise, we will now be working with font analogies. Feel free to use the Font Finder website to explore different fonts and obtain their attribute vectors.
+			<br/> <br/>
 
-a. Here is a basic "bolding vector" that Natalie obtained by getting the vector of thickest font in the “Saved Sample” space:
+			<img src="images/assignment_4/nearest_font.png" alt="Corr Map" align="middle" height="300" width="400" />
 
-“0.053,0.026,-0.060,-0.014,-0.093,-0.018,0.087,0.096,-0.039,0.071,0.111,-0.022,-0.007,0.022,-0.032,0.141,0.126,-0.015,-0.075,0.120,0.068,0.021,0.104,-0.065,-0.085,-0.018,-0.038,-0.059,-0.051,-0.056,0.154,-0.044,-0.116,0.038,-0.144,-0.103,-0.032,0.059,-0.076,-0.030”
+			Code found in VectorChooser.vue below.  
 
-Try to add this vector to any font. You may do the basic vector math by modifying the “Apply Vector Math” button in VectorChooser.vue or adding a new button/functionality. 
+			<br/> <br/>
 
-What does adding this vector to a font do? Does it perform bolding well at thickening the original font? Are there other characteristics that seem to also carry over? Try this with another characteristic. It may be helpful to use the characteristics you gathered previously.
+			Problem 2: 
 
-b. Find 10 fonts for a specific quality (i.e. bolding, dotting, fancy, serif...etc) and average them out to find a characteristic vector (for example, “bolding vector”). Try applying that vector to another font. Again, you can do this by manual computation and then modifying the added vector in the "Apply Vector Math" button, or you can make new buttons. Does it work better or worse than the previous one-sample method? Try this with at least 2 characteristics.
+			<br/> <br/>
 
-c. Find 10 fonts the exhibit for a specific characteristic and 10 fonts for the opposite of that characteristic (i.e. bold vs. corresponding non-bold). Subtract the vectors for each pair and take the average difference. How does this work as a vector for the characteristic (e.g., as a "bolding vector")?   Does this work better or worse than the method above to obtain your desired characteristic? Try this with at least 2 characteristics.
 
-4. Can you figure out how to create a vector that makes uppercase fonts lowercase? (Hint: You can try finding fonts that only have uppercase/lowercase characters and finding analogous vectors, or you can try playing with the 40 attribute sliders directly.)
+			2. What is the “average” of a set of fonts? (Hint: What does that mean in terms of the 40 dimensions)? Write some code to Find the nearest font neighbor to the average font. 
 
-5. Can you create a vector based on your personal font tastes (i.e. a personal-likeable vector)? Please also make note of any interesting vector directions you find.
+			3. Similar to Monday's word analogy exercise, we will now be working with font analogies. Feel free to use the Font Finder website to explore different fonts and obtain their attribute vectors.
 
-6. Link your code in a text-readable format with your submission.
+			a. Here is a basic "bolding vector" that Natalie obtained by getting the vector of thickest font in the “Saved Sample” space:
+
+			“0.053,0.026,-0.060,-0.014,-0.093,-0.018,0.087,0.096,-0.039,0.071,0.111,-0.022,-0.007,0.022,-0.032,0.141,0.126,-0.015,-0.075,0.120,0.068,0.021,0.104,-0.065,-0.085,-0.018,-0.038,-0.059,-0.051,-0.056,0.154,-0.044,-0.116,0.038,-0.144,-0.103,-0.032,0.059,-0.076,-0.030”
+
+			Try to add this vector to any font. You may do the basic vector math by modifying the “Apply Vector Math” button in VectorChooser.vue or adding a new button/functionality. 
+
+			What does adding this vector to a font do? Does it perform bolding well at thickening the original font? Are there other characteristics that seem to also carry over? Try this with another characteristic. It may be helpful to use the characteristics you gathered previously.
+
+			b. Find 10 fonts for a specific quality (i.e. bolding, dotting, fancy, serif...etc) and average them out to find a characteristic vector (for example, “bolding vector”). Try applying that vector to another font. Again, you can do this by manual computation and then modifying the added vector in the "Apply Vector Math" button, or you can make new buttons. Does it work better or worse than the previous one-sample method? Try this with at least 2 characteristics.
+
+			c. Find 10 fonts the exhibit for a specific characteristic and 10 fonts for the opposite of that characteristic (i.e. bold vs. corresponding non-bold). Subtract the vectors for each pair and take the average difference. How does this work as a vector for the characteristic (e.g., as a "bolding vector")?   Does this work better or worse than the method above to obtain your desired characteristic? Try this with at least 2 characteristics.
+
+			4. Can you figure out how to create a vector that makes uppercase fonts lowercase? (Hint: You can try finding fonts that only have uppercase/lowercase characters and finding analogous vectors, or you can try playing with the 40 attribute sliders directly.)
+
+			5. Can you create a vector based on your personal font tastes (i.e. a personal-likeable vector)? Please also make note of any interesting vector directions you find.
+
+			6. Link your code in a text-readable format with your submission.
+
+			
 
 		   </p>
 
