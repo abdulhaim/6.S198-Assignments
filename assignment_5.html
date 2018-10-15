@@ -48,14 +48,21 @@
 
 		A reshape layer cannot reshape 600 to [20,20,2], as 20*20*2=800 and not 600. A reshape layer however can go from 800 to [20,10,4] as 20*10*4 = 800.
 
+		<br/> <br/>
+
 		<b> 1.2.2  Submit screenshots of some results (generated examples, discriminator predictions on real and fake data, and learning curves as in the plots above). </b>
 		
+		<br/> <br/>
+
 		Here is a screen shot of the generated examples after approximately 10-15 minutes of training, along with the learning curves. The curves on the right show that as we train for longer amounts of time, the cost of the discriminator increases as the generator is able to create pictures that are able to seem more like the real images to fool the discriminator. This decreases the cost of the generator as shown.
 
 
 		<br/> <br/>
 	
 		<img src="images/assignment_5/trial_1.png" alt="Corr Map" align="middle" height="300" width="500" />
+
+		<br/> <br/>
+
 
 		<b>  1.2.3  Can you say anything about the performance of the system's default fully connected model versus the performance of the convolutional model? </b>
 
@@ -74,7 +81,6 @@
 		The first one was with the CNN model with a learning rate of the discriminator as 0.1 as shown. Here is the model after 10 minutes:
 
 		<br/> <br/>
-
 
 		<img src="images/assignment_5/trial_2.png" alt="Corr Map" align="middle" height="300" width="500" />
 
@@ -116,7 +122,7 @@
 
 		<br/> <br/>
 
-		Here is a basic model for CIFASR with the FC layer. This took longer than 15 minutes to train, and still did not perform very well. 
+		Here is a basic model for CIFAR with the FC layer. This took longer than 15 minutes to train, and still did not perform very well. This is probably due to the fact that the CIFAR dataset is much more complex as it has more color channels (3).
 
 		<br/> <br/>
 
