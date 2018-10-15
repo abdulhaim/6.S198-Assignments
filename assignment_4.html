@@ -12,14 +12,14 @@
 
 		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
 			
-			Problem 1: Spend some time using the embedding projector to make and share observations about the MNIST data. Do the different digits separate into distinct clouds? Are there images that are in the wrong cloud, and can you make sense of why they are wrong? Are there images that are outliers from the rest of the data? Are there digits that seem more separate from the others, and are there pairs of digits that are more easily confused? 
+			<b>Problem 1: Spend some time using the embedding projector to make and share observations about the MNIST data. Do the different digits separate into distinct clouds? Are there images that are in the wrong cloud, and can you make sense of why they are wrong? Are there images that are outliers from the rest of the data? Are there digits that seem more separate from the others, and are there pairs of digits that are more easily confused? <b/>
 
 			<br/> <br/>
 			The different digits do seperate out into seperate clouds, with some outliers present in cases where the digit could be misclassified due to the way they are written (slanted, enlarged, etc) which makes them look like another digit. These observations happens for both projection methods PCA and t-SNE. 
 
 			<br/> <br/>
 
-			Principal Component Analysis (PCA).  PCA maps the data onto the dimensions along which the data has the greatest variation, the next greatest variation, and so on. On the other hand, t-SNE (t-Distributed Stochastic Neighboring Entities) chooses 3 axis such that the distances between the projected points in 3 dimensions are close to the distances between the points the high-dimensional space. This is done by an iterative computation where the distance difference is reduced step by step. Due to this difference between the two methods, PCA has a greater tendency to misclassify numbers as other numbers as it chooses the directions with the greatest difference between them. 
+			Principal Component Analysis maps the data onto the dimensions along which the data has the greatest variation, the next greatest variation, and so on. On the other hand, t-SNE (t-Distributed Stochastic Neighboring Entities) chooses 3 axis such that the distances between the projected points in 3 dimensions are close to the distances between the points the high-dimensional space. This is done by an iterative computation where the distance difference is reduced step by step. Due to this difference between the two methods, PCA has a greater tendency to misclassify numbers as other numbers as it chooses the directions with the greatest difference between them. 
 
 			<br/> <br/>
 
@@ -51,7 +51,7 @@
 
 		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
 			
-			Problem 2: Remember that this geometry is not based on any word definitions, but rather only the frequencies with which words co-occur in phrases. Also keep in mind that the vertical positions of the words are random, although you can specify these, too, by setting “up” and “down”. Experiment with various words to see if you can identify any insights about the data set. For example, try “politics” along the dimension from “bad” to “good”, or “engineer” along the spectrum from “man” to “woman”. Write up some notes on your observations, perhaps supplemented with a few pictures. Do you get different or better results if you use Word2Vec All instead of 10K? Did you find any interesting examples that speak to how words are used news articles? 
+			<b> Problem 2: Remember that this geometry is not based on any word definitions, but rather only the frequencies with which words co-occur in phrases. Also keep in mind that the vertical positions of the words are random, although you can specify these, too, by setting “up” and “down”. Experiment with various words to see if you can identify any insights about the data set. For example, try “politics” along the dimension from “bad” to “good”, or “engineer” along the spectrum from “man” to “woman”. Write up some notes on your observations, perhaps supplemented with a few pictures. Do you get different or better results if you use Word2Vec All instead of 10K? Did you find any interesting examples that speak to how words are used news articles? <b/> 
 
 			<br/> <br/>
 
@@ -79,11 +79,11 @@
 
 		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
 
-			Problem 3: Spend a few minutes experimenting with the demo on https://rare-technologies.com/word2vec-tutorial/ (under “Bonus App”) which uses Word2Vec vector algebra to solve analogies.  Make a note of any interesting examples you find.
+			<b> Problem 3: Spend a few minutes experimenting with the demo on https://rare-technologies.com/word2vec-tutorial/ (under “Bonus App”) which uses Word2Vec vector algebra to solve analogies.  Make a note of any interesting examples you find. <b/>
 
 			<br/> <br/>
 
-			As usual, I tried to ask very simple analogies to the model and it performed pretty well as shown: 
+			I tried to ask very simple analogies to the model and it performed pretty well as shown: 
 
 			<br/> <br/>
 
@@ -99,21 +99,21 @@
 
 			<br/> <br/>
 
-			It is interesting that the demo is very sensitive to capitalization and even order of the words as shown below:
+			However with more complex things, it is interesting that the demo is very sensitive to capitalization and even order of the words as shown below:
 
 			<br/> <br/>
 
-			<img src="images/assignment_4/order_matters_normal.png" alt="Corr Map" align="middle" height="200" width="500" />
+			<img src="images/assignment_4/order_matters_normal.png" alt="Corr Map" align="middle" height="100" width="500" />
 
 			<br/> <br/>
 
-			<img src="images/assignment_4/order matters.png" alt="Corr Map" align="middle" height="200" width="500" />
+			<img src="images/assignment_4/order matters.png" alt="Corr Map" align="middle" height="100" width="500" />
 
 			<br/> <br/>
 
 			If the relationship between the first two words is not clear, the model returns the most similar word or the same word as shown below:
 
-			<img src="images/assignment_4/dummy.png" alt="Corr Map" align="middle" height="200" width="500" />
+			<img src="images/assignment_4/dummy.png" alt="Corr Map" align="middle" height="100" width="500" />
 
 
 		   </p>
@@ -122,11 +122,11 @@
 
 		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
 
-		   	Problem 4: Navigate to this link to look at different embedding spaces for fonts: goo.gl/F3tjgs.
+		   	<b> Problem 4: Navigate to this link to look at different embedding spaces for fonts: goo.gl/F3tjgs. <b/>
 
 		   	<br/> <br/>
 
-			1. View the fonts with PCA embedding. Do you see any clumps/areas with obvious characteristics? Record a few Font IDs for distinct characteristics/groupings that you find interesting (hover over a character to get its font ID), such as bold, italics, cursive...etc. You will use this in the homework.
+			<b> 1. View the fonts with PCA embedding. Do you see any clumps/areas with obvious characteristics? Record a few Font IDs for distinct characteristics/groupings that you find interesting (hover over a character to get its font ID), such as bold, italics, cursive...etc. You will use this in the homework.<b/>
 
 			<br/> <br/>
 
@@ -138,7 +138,7 @@
 
 			<br/> <br/>
 
-			2. Change to the embedding to T-SNE. Record how many iterations you let T-SNE run for for and whether or not you were able to get interesting groupings. Again, record Font IDs for interesting fonts/groupings.
+			<b> 2. Change to the embedding to T-SNE. Record how many iterations you let T-SNE run for for and whether or not you were able to get interesting groupings. Again, record Font IDs for interesting fonts/groupings. <b/>
 
 			<br/> <br/>
 
@@ -162,7 +162,7 @@
 
 			<br/> <br/>
 
-			3. Find a font you like, get its ID, and type that into the search bar at the right-hand side of the screen. Use the "neighbors" slider to isolate a few dozen points and record the Font IDs of the 10 nearest neighbors that make sense. Repeat this for 3 or 4 fonts. If you find a font that doesn't have nearest neighbors that look similar, note that down as well.
+			<b> 3. Find a font you like, get its ID, and type that into the search bar at the right-hand side of the screen. Use the "neighbors" slider to isolate a few dozen points and record the Font IDs of the 10 nearest neighbors that make sense. Repeat this for 3 or 4 fonts. If you find a font that doesn't have nearest neighbors that look similar, note that down as well. <b>
 
 			<br/> <br/>
 
@@ -184,15 +184,15 @@
 
 		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
 			
-			You will be modifying the latent space explorer code to create new fonts with various characteristics. 
+			<b> You will be modifying the latent space explorer code to create new fonts with various characteristics.  <b/>
 
 			<br/> <br/>
 
-			Problem 0: 
+			<b> Problem 0: 
 
 			<br/> <br/>
 
-			Edit FontModel.js so another character besides "r" is being displayed as the sample character for the 40 attributes. Edit Alphabet.vue so that all of the uppercase, lowercase, and numerical sample font characters are displayed in the right side of the screen instead of just the lowercase characters. Take a screenshot for your writeup.
+			Edit FontModel.js so another character besides "r" is being displayed as the sample character for the 40 attributes. Edit Alphabet.vue so that all of the uppercase, lowercase, and numerical sample font characters are displayed in the right side of the screen instead of just the lowercase characters. Take a screenshot for your writeup. <b/>
 
 			<br/> <br/>
 
@@ -204,11 +204,11 @@
 
 			<br/> <br/>
 
-			Problem 1: 
+			<b> Problem 1: 
 
 			<br/> <br/>
 
-			Edit VectorChooser.vue to add a new button under the "Apply vector math" button. The new button should show the font Id of the "nearest neighbor" font that is "most similar to" the current font, out of all the fonts in the 50K training set.
+			Edit VectorChooser.vue to add a new button under the "Apply vector math" button. The new button should show the font Id of the "nearest neighbor" font that is "most similar to" the current font, out of all the fonts in the 50K training set. <b/>
 
 			<br/> <br/>
 
@@ -244,38 +244,375 @@
 
 			<img src="images/assignment_4/nearest_font.png" alt="Corr Map" align="middle" height="300" width="400" />
 
+			<br/> <br/>
+
 			Code found in VectorChooser.vue below.  
 
 			<br/> <br/>
 
-			Problem 2: 
+			<b> Problem 2: 
+
+			<br/> <br/>
+			
+			What is the “average” of a set of fonts? (Hint: What does that mean in terms of the 40 dimensions)? Write some code to Find the nearest font neighbor to the average font. <b/>
+
+			<br/> <br/>
+
+			I wrote the averageFont() function in VectorChooser.vue, got the following array:
+
+			<br/> <br/>
+
+			[-0.000124320141856429, 0.000022525580738627565, 0.000646677839355725, 0.0004773265256703026, 0.0004433987218218819, 0.00008797250749145697, -0.0005086097026959425, 0.00016423043132669852, 0.0008733155023525235, 0.00021128469573056908, 0.00021851315825218665, 0.0005214037718991349, 0.0004096699608621636, -0.000005339061712046511, 0.001000477659268697, -0.0008704279279481118, -0.0011643380088616098, -0.0006813468613325405, -0.0003471472181327653, -0.0009555762582905476, -0.0002645048964550626, -0.00143721933132748, -0.00021880659386086293, 0.00039623356920223907, 0.0008071640535582885, 0.00043089803987381007, -0.0004831867815697453, -0.000860227456774199, 0.00008203981762080871, -0.0004439634490469698, 0.001246477857942283, -0.00010589092784497806, -0.00032538251213747114, -0.00026358538396130366, 0.000005716228629299543, 0.0005717553003707139, 0.000204951003806793, -0.000345056570539102, -0.0010559170922919312, -0.00009686533674324513]
+
+			<br/> <br/>
+
+			And inserted it to find what font it corresponded to. Then I clicked on the button "Find Nearest Neighbor" to get the font with the nearest neighbor.
 
 			<br/> <br/>
 
 
-			2. What is the “average” of a set of fonts? (Hint: What does that mean in terms of the 40 dimensions)? Write some code to Find the nearest font neighbor to the average font. 
+			Here are the visuals showing the nearest neighbor and current Font.
 
-			3. Similar to Monday's word analogy exercise, we will now be working with font analogies. Feel free to use the Font Finder website to explore different fonts and obtain their attribute vectors.
+			<br/> <br/>
+
+
+			<img src="images/assignment_4/averageFont.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/averageFontNeighbor.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<b> Problem 3: 
+
+			<br/> <br/>
+
+			Similar to Monday's word analogy exercise, we will now be working with font analogies. Feel free to use the Font Finder website to explore different fonts and obtain their attribute vectors.
+
+			<br/> <br/>
 
 			a. Here is a basic "bolding vector" that Natalie obtained by getting the vector of thickest font in the “Saved Sample” space:
 
+			<br/> <br/>
+
+
 			“0.053,0.026,-0.060,-0.014,-0.093,-0.018,0.087,0.096,-0.039,0.071,0.111,-0.022,-0.007,0.022,-0.032,0.141,0.126,-0.015,-0.075,0.120,0.068,0.021,0.104,-0.065,-0.085,-0.018,-0.038,-0.059,-0.051,-0.056,0.154,-0.044,-0.116,0.038,-0.144,-0.103,-0.032,0.059,-0.076,-0.030”
 
-			Try to add this vector to any font. You may do the basic vector math by modifying the “Apply Vector Math” button in VectorChooser.vue or adding a new button/functionality. 
+			<br/> <br/>
 
-			What does adding this vector to a font do? Does it perform bolding well at thickening the original font? Are there other characteristics that seem to also carry over? Try this with another characteristic. It may be helpful to use the characteristics you gathered previously.
+			Try to add this vector to any font. You may do the basic vector math by modifying the “Apply Vector Math” button in VectorChooser.vue or adding a new button/functionality. <b/>
 
-			b. Find 10 fonts for a specific quality (i.e. bolding, dotting, fancy, serif...etc) and average them out to find a characteristic vector (for example, “bolding vector”). Try applying that vector to another font. Again, you can do this by manual computation and then modifying the added vector in the "Apply Vector Math" button, or you can make new buttons. Does it work better or worse than the previous one-sample method? Try this with at least 2 characteristics.
+			<br/> <br/>
 
-			c. Find 10 fonts the exhibit for a specific characteristic and 10 fonts for the opposite of that characteristic (i.e. bold vs. corresponding non-bold). Subtract the vectors for each pair and take the average difference. How does this work as a vector for the characteristic (e.g., as a "bolding vector")?   Does this work better or worse than the method above to obtain your desired characteristic? Try this with at least 2 characteristics.
+			To apply the bolding Vector, I create a new button called "Apply Bolding Vector" that uses reminants from the Apply Vector Math Button. Below you can first see the original font and the font after applying one bolding operation. The vector thickens the font of the original letters. The form of the letter itself is carried over, however lower case letters soon look like upper case letters after multiple applications. 
+			<br/> <br/>
 
-			4. Can you figure out how to create a vector that makes uppercase fonts lowercase? (Hint: You can try finding fonts that only have uppercase/lowercase characters and finding analogous vectors, or you can try playing with the 40 attribute sliders directly.)
 
-			5. Can you create a vector based on your personal font tastes (i.e. a personal-likeable vector)? Please also make note of any interesting vector directions you find.
+			<img src="images/assignment_4/beforeBoldingVector.png" alt="Corr Map" align="middle" height="300" width="400" />
 
-			6. Link your code in a text-readable format with your submission.
+			<br/> <br/>
 
-			
+
+			<img src="images/assignment_4/applyBoldingVector.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			I tried this with another characteristic of fattening the font (white background with dark outline) below. It did not work as I had hoped. 
+
+			<br/> <br/>
+
+
+			<img src="images/assignment_4/beforeFatVector.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+
+			<img src="images/assignment_4/afterFatVector.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+
+
+			<br/> <br/>
+
+			<b> b. Find 10 fonts for a specific quality (i.e. bolding, dotting, fancy, serif...etc) and average them out to find a characteristic vector (for example, “bolding vector”). Try applying that vector to another font. Again, you can do this by manual computation and then modifying the added vector in the "Apply Vector Math" button, or you can make new buttons. Does it work better or worse than the previous one-sample method? Try this with at least 2 characteristics.  <b/>
+
+			<br/> <br/>
+
+			I found 10 fonts as shown below, that exhibited the thinning characteristic. After averaging them, I applied the vector to the current font. The method is called applyThinAverageFont() in the file VectorChooser.vue.
+
+			<br/> <br/>
+
+			Here are the 10 fonts: 
+
+			<img src="images/assignment_4/sample_1.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+
+			<img src="images/assignment_4/sample_2.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+
+			<img src="images/assignment_4/sample_3.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_4.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_5.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_6.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_7.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_8.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_9.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_10.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			Here is the vector I applied it to:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/before.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+
+			After one application:
+
+			<img src="images/assignment_4/after_1.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			After two applications: 
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/after_2.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+
+			I also chose to find 10 bold fonts. Here are the 10 bold fonts used:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_1_bold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_2_bold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_3_bold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_4_bold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_5_bold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_6_bold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_7_bold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_8_bold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_9_bold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/sample_10_bold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			Here is the font before application:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/before_bold_average.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			After application of the average bold vector:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/after_bold_average.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+
+			<b> c. Find 10 fonts the exhibit for a specific characteristic and 10 fonts for the opposite of that characteristic (i.e. bold vs. corresponding non-bold). Subtract the vectors for each pair and take the average difference. How does this work as a vector for the characteristic (e.g., as a "bolding vector")?   Does this work better or worse than the method above to obtain your desired characteristic? Try this with at least 2 characteristics.  <b/>
+
+			<br/> <br/>
+
+			For this part, I took the 10 thin fonts and 10 bold fonts from the previous section, took the difference between them, and then computed the average, I found the following results: 
+
+			<br/> <br/>
+
+			Before Application:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/before_bold_noBold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			After Application:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/after_bold_noBold.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			I noticed that the font looked extra bolder instead of the affect being cancelled out.
+
+			<br/> <br/>
+
+			<b> 4. Can you figure out how to create a vector that makes uppercase fonts lowercase? (Hint: You can try finding fonts that only have uppercase/lowercase characters and finding analogous vectors, or you can try playing with the 40 attribute sliders directly.)  <b/>
+
+			<br/> <br/>
+
+			I tried to apply a lower case font to an upper case font to see if this would work, and the results are shown below. It did not work as well as hoped.
+
+			Here is the font I used:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/lower_case_font.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			Before Application:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/before_lower_case.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			After Application:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/after_lower_case.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<b> 5. Can you create a vector based on your personal font tastes (i.e. a personal-likeable vector)? Please also make note of any interesting vector directions you find.  <b/>
+
+			<br/> <br/>
+
+			Here is a font I made based on my personal tastes. I averaged out 10 fonts I liked as shown below, and applied it to a font.
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_1.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_2.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_3.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_4.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_4.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_5.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_6.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_7.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_8.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_9.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/fav_10.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			Before Application:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/before_fav.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			After Application:
+
+			<br/> <br/>
+
+			<img src="images/assignment_4/after_fav.png" alt="Corr Map" align="middle" height="300" width="400" />
+
+			<br/> <br/>
+
+			Problem 6: 
+
+			<br/> <br/>
+
+			Links for:
+
+			<br/> <br/>
+
+			<a href="images/assignment_4/VectorChooser.hue">VectorChooser.hue</a>
+
+		 	<br/> <br/>
+
+			<a href="images/assignment_4/Alphabet.hue">Alphabet.hue</a>
+
+			<br/> <br/>
+
+			<a href="images/assignment_4/FontModel.js">FontModel.js</a>
+		 	<br/> <br/>
+
 
 		   </p>
 
