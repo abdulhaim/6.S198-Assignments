@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 5</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<h1> Assignment 6: Reinforcement Learning and OpenAI Gym </h1>
+		<h3> <i> Due Monday October 24th at 10 AM </i> </h3>
+
+		<h2> <b> 1.1 Installing OpenAI Gym </b> </h2>
+
+		   <p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
+	
+			<b> Problem 1: What is the reward scheme for FrozenLake? 	</b>
+
+			<br/> <br/>
+
+			The states are: {S, F, H, G} representing starting point, frozen surface, hole, and goal, giving the reward scheme:
+
+			<br/> <br/>
+
+			R(s,a) = 1  if s = G
+						<br/> <br/>
+				   = 0  otherwise 
+						<br/> <br/>
+
+			<br/> <br/>
+
+
+			<b> Problem 2: How big is the table used for Q-learning above? </b>
+
+			<br/> <br/>
+
+			To learn the long-term expected rewards, we use Q-learning, which learns the value for taking a particular action within a given state. Since the table is storing the values of every action made from every state, ane we have 4 actions (up, down, left, right) and 4 states (starting point, frozen surface, hole, and goal), we get a transition function or table for each action. Each transition function table is 16 values (4 by 4), and so we get a total of 16*4 = 64 values in your table.
+
+			<br/> <br/>
+
+			<b> Problem 3: Did the rewards improve over time? Why or why not? </b>
+
+			<br/> <br/>
+
+			The rewards did not improve over time and the totalReward is zero at every step in the while loop. 
+
+			<br/> <br/>
+
+			<b> Problem 4: In the above code segment, we provided some values for the learning rate and discount factor. Try different values for the learning rate. What do you observe?</b>
+
+			<br/> <br/>
+
+			For instance, decreasing the discount factor decreases the amount of time it takes for the program to finish and coverge to find a final solution. 
+
+			<br/> <br/>
+
+			</p>
+
+	</body>
+
+</html>
+
+
+
+
+
