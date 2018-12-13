@@ -25,6 +25,7 @@
 		<img src="images/final_project/intro_picture.png" alt="Teachable Machine" align="middle" height="300" width="400" />
 
 		</center>
+
 		</p>
 
 		<br/> <br/>
@@ -42,9 +43,14 @@
 
 		   	<center> 
 
-		   		<img src="images/final_project/graph.png" alt="Teachable Machine" align="middle" height="300" width="400"/>
+		   <img src="images/final_project/graph.png" alt="Teachable Machine" align="middle" height="300" width="400"/>
 
 		   	</center>
+
+		   </p>
+
+			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
 
 		   	<br/> <br/>
 
@@ -54,7 +60,7 @@
 
 			This proof of concept takes in a video of a person signing, converts the video into frames, segments out the hands in the images and feeds the input into a CNN + LSTM hybrid model that yields the final output: the word corresponding to this sign. 
 
-	</p>
+		</p>
 			<h2> <b> Background Research & Prior Work </b> </h2>
 
 			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
@@ -98,6 +104,10 @@
 
 			</center>
 
+		</p>
+
+		<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
 			<br/> <br/>
 
 			The Argentinian Sign Language dataset consists of 64 different words in the Argentinean Sign Language, with videos of 10 different people signing each word up to 5 times, for a total of 3200 videos. For preprocessing, we broke up each video in 200 frames, each resulting in a large subset of images that we could train our model on. Additionally, since the hands in our dataset were conveniently colored (pink and green for the left and right hands respectively), it made it very easy for us to segment our the hands and color the image black and white, where the former represents the background and the latter represents the hands. 
@@ -123,6 +133,10 @@
 				<img src="images/final_project/cnn.png" alt="Teachable Machine" align="middle" height="300" width="600"  />
 
 			</center>
+
+			</p>
+			<p style = "font-size:18px ; line-height: 1.4em; color: #333 "> 
+
 
 			<br/> <br/>
 
@@ -188,6 +202,8 @@
 			As described above, the model we used was a mobilenet architecture.  And utilizing Transfer Learning, we were able to train our model to over 95% accuracies in less than a couple of hours on a CPU! As you can see on the graphs below, within the first few hundred epochs the model had reach over 90% accuracy. We trained for a total of 4000 epochs. 
 
 			<br/> <br/>
+
+			</p>
 
 			<center>
 
